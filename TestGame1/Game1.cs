@@ -22,6 +22,12 @@ namespace TestGame1
         public static int WIDTH = 4, HEIGHT = 3, SCALE = 160, w = WIDTH * SCALE, h = HEIGHT * SCALE;
         public static string TITLE = "TITLE WOW SUCH GAME"; //shit
 
+        /*
+         * 
+         * HELLÓ, ÁKOS!
+         * 
+         */
+
         public Game1()
             : base()
         {
@@ -62,6 +68,8 @@ namespace TestGame1
         {
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
+
+
 
             // TODO: use this.Content to load your game content here
         }
