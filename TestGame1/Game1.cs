@@ -28,6 +28,12 @@ namespace TestGame1
          * 
          */
 
+        /*
+         * 
+         * Csáó
+         * 
+         */
+
         public Game1()
             : base()
         {
