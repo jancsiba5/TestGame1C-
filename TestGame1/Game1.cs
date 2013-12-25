@@ -20,7 +20,7 @@ namespace TestGame1
         SpriteBatch spriteBatch;
 
         public static int WIDTH = 4, HEIGHT = 3, SCALE = 160, w = WIDTH * SCALE, h = HEIGHT * SCALE;
-        public static string TITLE = "TITLE WOW SUCH GAME";
+        public static string TITLE = "TITLE WOW SUCH GAME"; //shit
 
         public Game1()
             : base()
