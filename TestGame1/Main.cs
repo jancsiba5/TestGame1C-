@@ -14,7 +14,7 @@ namespace TestGame1
     /// <summary>
     /// This is the main type for your game
     /// </summary>
-    public class Game1 : Game
+    public class Main : Game
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
@@ -24,15 +24,13 @@ namespace TestGame1
         public static string TITLE = "TITLE WOW SUCH GAME";
         #endregion
 
-        #region ÜZENET
-        /*
-         * 
-         * HELLÓ, ÁKOS!
-         * 
-         */
+        // Játék osztály, ott lesz a fő logika, MAIN-T HAGYNI!!!
+        GameClass game;
+
+        #region Teszt cuccok ide!
         #endregion
 
-        public Game1()
+        public Main()
             : base()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -101,6 +99,10 @@ namespace TestGame1
 
             // TODO: Add your update logic here
 
+            game.input();
+
+            game.tick();
+
             base.Update(gameTime);
         }
 
@@ -112,7 +114,14 @@ namespace TestGame1
         {
             GraphicsDevice.Clear(new Color(0.5f, 0.5f, 0.5f, 0.5f));
 
-            // TODO: Add your drawing code here
+            // spriteBatch Begin End közé rajzolás, Camera translate előtt a Parallax cuccok,
+            // Utána a GUI cuccok
+
+            spriteBatch.Begin();
+
+            game.render();
+
+            spriteBatch.End();
 
             base.Draw(gameTime);
         }
