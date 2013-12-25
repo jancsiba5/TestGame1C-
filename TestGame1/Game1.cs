@@ -19,20 +19,18 @@ namespace TestGame1
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
+        #region Ablak paraméterek
         public static int WIDTH = 4, HEIGHT = 3, SCALE = 160, w = WIDTH * SCALE, h = HEIGHT * SCALE;
-        public static string TITLE = "TITLE WOW SUCH GAME"; //shit
+        public static string TITLE = "TITLE WOW SUCH GAME";
+        #endregion
 
+        #region ÜZENET
         /*
          * 
          * HELLÓ, ÁKOS!
          * 
          */
-
-        /*
-         * 
-         * Csáó
-         * 
-         */
+        #endregion
 
         public Game1()
             : base()
@@ -52,6 +50,8 @@ namespace TestGame1
             // TODO: Add your initialization logic here
 
             SetWindowPrefferences();
+
+            Resources.setContentLoader(Content);
 
             base.Initialize();
         }
@@ -110,7 +110,7 @@ namespace TestGame1
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.CornflowerBlue);
+            GraphicsDevice.Clear(new Color(0.5f, 0.5f, 0.5f, 0.5f));
 
             // TODO: Add your drawing code here
 
